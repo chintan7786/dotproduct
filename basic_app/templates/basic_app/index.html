@@ -1,6 +1,18 @@
 {% extends 'basic_app/base.html' %} {% load static %} {% block body %}
-<h1>okay</h1>
+
+<style>
+    .col-4 {}
+    
+    #add_card {
+        margin: 20px;
+    }
+</style>
+
+
 <div class="container">
+
+    <button id="add_card" class="btn btn-primary">Add Card</button>
+
     <div class="row">
         <div class="col-4">1</div>
         <div class="col-4">2</div>
