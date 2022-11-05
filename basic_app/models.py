@@ -4,7 +4,7 @@ from django.db import models
 class Card(models.Model):
     title = models.CharField(max_length = 255)
     description = models.CharField(max_length = 50)
-    dropdown = models.CharField(max_length = 50)
+    phase = models.CharField(max_length = 50)
 
     def __str__(self):
         return self.title
