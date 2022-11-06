@@ -46,7 +46,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
-    # "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -122,7 +121,7 @@ STATIC_URL = "/static/"
 
 # MEDIA_URL = '/images/'
 
-# STATICFILES_DIRS = [BASE_DIR / "static",]
+STATICFILES_DIRS = [BASE_DIR / "static",]
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
