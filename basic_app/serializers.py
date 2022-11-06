@@ -4,4 +4,4 @@ from .models import Card
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card
-        fields = ('title', 'description', 'phase')
+        fields = ('card_id', 'title', 'description', 'phase')
