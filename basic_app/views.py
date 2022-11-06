@@ -16,9 +16,11 @@ def cardApi(request, id=0):
         cards = Card.objects.all()
         cards_serializer = CardSerializer(cards, many=True)
         return JsonResponse(cards_serializer.data, safe=False)
+
     elif request.method == 'POST':
         card_data = JSONParser().parse(request)
         card_serializer = CardSerializer(data=card_data)
+        print(card_serializer)
         if card_serializer.is_valid():
             card_serializer.save()
             return JsonResponse('Added Successfully', safe=False)
@@ -34,7 +36,6 @@ def cardApi(request, id=0):
         return JsonResponse('failed to update', safe=False)
 
     elif request.method == 'DELETE':
-        print(id)
         card = Card.objects.get(card_id = id)
         card.delete()
         return JsonResponse('deleted!', safe=False)
